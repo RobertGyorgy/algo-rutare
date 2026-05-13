@@ -1,0 +1,7 @@
+node_modules/
+.DS_Store
+otp-config/otp.jar
+otp-config/brasov.pbf
+otp-config/ratbv-gtfs.zip
+target/
+*.log
