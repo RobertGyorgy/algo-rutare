@@ -44,16 +44,25 @@ The Bridge returns a **FeatureCollection**. In the Angular component, we map the
 
 ## 🛠 Setup & Running
 
-1.  **Start the Engine (OTP):**
-    ```bash
-    cd otp-config
-    java -Xmx4G -jar otp.jar --build --serve .
-    ```
+### 1. Download Large Binaries
+Since `otp.jar` and `brasov.pbf` are too large for GitHub (>500MB total), run the included setup script to fetch them:
+```bash
+chmod +x setup-engine.sh
+./setup-engine.sh
+```
 
-2.  **Start the Bridge:**
-    ```bash
-    node pwa-bridge.js
-    ```
+### 2. Start the Engine (OTP)
+Once the files are downloaded, build the graph and start the server:
+```bash
+cd otp-config
+java -Xmx4G -jar otp.jar --build --serve .
+```
+
+### 3. Start the Bridge
+In a separate terminal, start the Node.js translator:
+```bash
+node pwa-bridge.js
+```
 
 ## 🧠 Routing Logic
 The rules are defined in `otp-config/router-config.json`. We use "Transit-Aggressive" settings:

@@ -2,6 +2,6 @@ node_modules/
 .DS_Store
 otp-config/otp.jar
 otp-config/brasov.pbf
-otp-config/ratbv-gtfs.zip
+# ratbv-gtfs.zip is small enough to be versioned
 target/
 *.log
